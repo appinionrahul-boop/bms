@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -r \"echo PHP_VERSION, ' intl-normalizer: ', class_exists\\('Normalizer'\\) ? 'yes' : 'no', PHP_EOL;\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/debug/expense-budget)",
+      "Bash(cd \"/Users/rahulhossan/Documents/Software/BMS Upgrade/Modern BMS\" && ls -a | head -40 && echo \"---PARENT---\" && ls -a \"..\" | head -20)",
+      "Read(//Users/rahulhossan/Documents/Software/BMS Upgrade/**)",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git diff *)",
+      "Bash(xargs -0 du -ch)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(awk -F/ '{print $1}')",
+      "Bash(grep -iE '\\\\.env|\\\\.key|\\\\.pem|secret|credential|password|\\\\.sql$')",
+      "Bash(xargs -0 ls -la)",
+      "Bash(sort -k5 -rn)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git reset *)",
+      "Bash(git rm *)"
+    ]
+  }
+}
