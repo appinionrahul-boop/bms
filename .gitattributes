@@ -1,4 +1,13 @@
 * text=auto
+
+# Fonts must never be line-ending normalised — mpdf/SolaimanLipi render
+# the Bangla PDFs and a single mangled byte corrupts the file.
+*.ttf binary
+*.otf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
