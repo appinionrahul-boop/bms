@@ -76,7 +76,7 @@ class BanglaConverter {
 <body>
     {{-- <a href="{{ route('generate-pdf',['download'=>'pdf']) }}">Download PDF</a> --}}
 <div class="">
-<p style="font-size: 24x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>ব্যয় বিল রেজিস্টার (রাজস্ব ) <br><br>অর্থবছর :২০২৫-২০২৬</p>
+<p style="font-size: 24x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>ব্যয় বিল রেজিস্টার (রাজস্ব ) <br><br>অর্থবছর :{{ $activeFiscalYear }}</p>
    {{-- <p style="font-size: 20px; text-align:center"> অর্থবছর ২০২৪-২০২৫</p> --}}
 </div>
 

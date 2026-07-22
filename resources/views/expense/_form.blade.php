@@ -1,7 +1,7 @@
 @php
-  $fiscalYears = \App\Support\FiscalYear::all();
   $selectedVoucher = old('expense_voucher', $expense->voucher_no ?? '');
   $selectedFiscalYear = old('expense_fiscalYear', $expense->fiscal_year ?? \App\Support\FiscalYear::active());
+  $fiscalYears = \App\Support\FiscalYear::selectable($selectedFiscalYear);
   $selectedCheque = old('expense_cheque', $expense->expense_cheque ?? '');
   $selectedCategory = old('expense_cat', $expense->expense_category ?? '');
   $selectedSubCategory = old('expense_subCat', $expense->expense_sub_category ?? '');

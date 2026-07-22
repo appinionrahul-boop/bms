@@ -79,9 +79,9 @@ class BanglaConverter {
    
     @foreach ($expense as $incomeShow)
         @if  ($incomeShow->expense_category=='3')
-         <p style="font-size: 24x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>ব্যয় বিল রেজিস্টার  (ADP) <br>  অর্থবছর :<?php echo "$expenseFY[0]" ; ?></p>
+         <p style="font-size: 24x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>ব্যয় বিল রেজিস্টার  (ADP) <br>  অর্থবছর :{{ $activeFiscalYear }}</p>
         @else
-              <p style="font-size: 24x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>ব্যয় বিল রেজিস্টার (রাজস্ব)<br>অর্থবছর :<?php echo "$expenseFY[0]" ; ?> </p>
+              <p style="font-size: 24x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>ব্যয় বিল রেজিস্টার (রাজস্ব)<br>অর্থবছর :{{ $activeFiscalYear }} </p>
         @endif
     @endforeach
 </div>

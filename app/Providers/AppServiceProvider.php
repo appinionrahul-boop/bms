@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Support\FiscalYear;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,5 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        View::composer('reportDownload.*', function ($view) {
+            $view->with('activeFiscalYear', FiscalYear::active());
+        });
     }
 }

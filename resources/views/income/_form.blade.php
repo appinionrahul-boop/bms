@@ -1,9 +1,9 @@
 @php
-  $fiscalYears = \App\Support\FiscalYear::all();
   $selectedRoot = old('root_cat', $income->income_source ?? '');
   $selectedSub = old('sub_cat', $income->income_sub_source ?? '');
   $selectedBot = old('botSubCat', $income->income_bot_source ?? '');
   $selectedFiscalYear = old('income_fiscalYear', $income->fiscal_year ?? \App\Support\FiscalYear::active());
+  $fiscalYears = \App\Support\FiscalYear::selectable($selectedFiscalYear);
   $selectedAmount = old('income_amount', $income->income_amount ?? '');
   $selectedDate = old('income_date', $income->income_date ?? '');
   $selectedMessage = old('income_message', $income->income_descriptation ?? '');

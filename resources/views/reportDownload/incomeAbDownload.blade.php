@@ -61,7 +61,7 @@
     {{-- <a href="{{ route('generate-pdf',['download'=>'pdf']) }}">Download PDF</a> --}}
 <div class="">
    <p style="font-size: 24x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>Abstract Report <br>নিজস্ব আয়  </p>
-   <p style="font-size: 24px"> অর্থবছর :২০২৫-২০২৬</p>
+   <p style="font-size: 24px"> অর্থবছর :{{ $activeFiscalYear }}</p>
 </div>
 
 

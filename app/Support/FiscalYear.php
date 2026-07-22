@@ -72,6 +72,27 @@ class FiscalYear
         return $years;
     }
 
+    /**
+     * The years offered when creating or editing an income/expense entry:
+     * previous, active, and next only.
+     *
+     * $include keeps an already-saved year in the list when editing an older
+     * record, so reopening it cannot silently reassign its fiscal year.
+     */
+    public static function selectable($include = null)
+    {
+        return collect([
+            self::previous(),
+            self::active(),
+            self::next(),
+            $include,
+        ])
+            ->filter()
+            ->unique()
+            ->sortDesc()
+            ->values();
+    }
+
     public static function setActive($fiscalYear)
     {
         if (!Schema::hasTable('settings')) {

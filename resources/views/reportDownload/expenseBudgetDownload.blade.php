@@ -79,7 +79,7 @@ class BanglaConverter {
 <div class="">
    <p style="font-size: 18x; text-align:center"> জেলা পরিষদ পঞ্চগড় <br>ফরম -"খ"<br> {বিধি ৪ দ্রষ্টব্য}
    <br> ২য়  অংশ ( রাজস্ব ও উন্নয়ন খাতে ব্যয় )  </p>
-   <p> অর্থবছর:২০২৬-২০২৭</p>
+   <p> অর্থবছর:{{ $fy1 }}</p>
 </div>
 
 
